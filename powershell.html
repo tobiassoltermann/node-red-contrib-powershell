@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('powershell', {
+        category: 'advanced',
+        color: '#487EDC',
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 2,
+        icon: "icon.png",
+        outputLabels: ["stdout","stderr"],
+        label: function() {
+            return this.name || "powershell"
+        }
+    });
+
+</script>
+
+
+<script type="text/xred" data-template-name="powershell">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="powershell">
+    <p>A simple node that wraps node-powershell features</p>
+</script>
