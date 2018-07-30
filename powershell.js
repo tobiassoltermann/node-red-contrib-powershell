@@ -14,9 +14,11 @@ module.exports = function(RED) {
             ps.addCommand(msg.payload);
             ps.invoke()
             .then(output => {
+                msg.payload = output;
                 this.send([output, null]);
             })
             .catch(error => {
+                msg.payload = error;
                 this.error(error);
             });
         });
