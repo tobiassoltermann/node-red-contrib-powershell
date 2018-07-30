@@ -29,4 +29,35 @@
 
 <script type="text/x-red" data-help-name="powershell">
     <p>A simple node that wraps node-powershell features</p>
+    <h3>Inputs</h3>
+        <dl class="message-properties">
+            <dt>payload
+                <span class="property-type">string</span>
+            </dt>
+            <dd> the commands to execute in a single string.</dd>
+        </dl>
+
+    <h3>Outputs</h3>
+        <ol class="node-ports">
+            <li>Standard output
+                <dl class="message-properties">
+                    <dt>payload <span class="property-type">string</span></dt>
+                    <dd>the standard output of the shell.</dd>
+                </dl>
+            </li>
+            <li>Standard error
+                <dl class="message-properties">
+                    <dt>payload <span class="property-type">string</span></dt>
+                    <dd>the standard error of the shell.</dd>
+                </dl>
+            </li>
+        </ol>
+
+    <h3>Details</h3>
+        <p><code>msg.payload</code> is used as the commands executed. Maybe arrays will be supported in the future.
+    <h3>References</h3>
+        <ul>
+            <li><a href="https://github.com/tobiassoltermann/node-red-contrib-powershell">GitHub</a> - the nodes github repository</li>
+        </ul>
+    </script>
 </script>

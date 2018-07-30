@@ -9,12 +9,6 @@ module.exports = function(RED) {
             executionPolicy: 'Bypass',
             noProfile: true
         });
-        ps.streams.stdout.on('data', data=>{
-            this.send([data, null]);
-        });
-        ps.streams.stderr.on('data', data=>{
-            this.send([null, data]);
-        });
 
         this.on('input', function(msg) {
             ps.addCommand(msg.payload);
