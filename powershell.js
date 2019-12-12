@@ -15,11 +15,11 @@ module.exports = function(RED) {
             ps.invoke()
             .then(output => {
                 msg.payload = output;
-                this.send([output, null]);
+                this.send(msg);
             })
             .catch(error => {
                 msg.payload = error;
-                this.error(error);
+                this.error(error, msg);
             });
         });
 
