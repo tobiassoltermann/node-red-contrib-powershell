@@ -7,7 +7,8 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         let ps = new shell({
             executionPolicy: 'Bypass',
-            noProfile: true
+            noProfile: true,
+            pwsh: true
         });
 
         this.on('input', function(msg) {
