@@ -17,6 +17,6 @@
     "powershell"
   ],
   "dependencies": {
-    "node-powershell": "^3.3.1"
+    "node-powershell": "^4.0.0"
   }
 }
